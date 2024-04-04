@@ -12,6 +12,7 @@ namespace ElevenNote.Data.Entities
         public int Id { get; set; }
         [Required]
         public int OwnerId { get; set; }
+        public UserEntity Owner { get; set; } = null!;
         [Required]
         [MinLength(2), MaxLength(100)]
         public string Title { get; set; } = string.Empty;
